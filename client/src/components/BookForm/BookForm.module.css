@@ -1,0 +1,36 @@
+.bookform-container{
+    margin: 0;
+    padding: 2em;
+    background-color: #c08c4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color: #f5eee9!important;
+}
+
+.mb2 {
+    margin-bottom: 2em !important;
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+    gap: 10px;
+    margin-bottom: 2em;
+}
+
+.input-field{
+    background: f5eee9!important;
+}
+
+.pageHeader {
+    color: rgba(66, 41, 26);
+    font-weight: 400;
+    border-bottom: 1px solid #c08c4d;
+    padding-top: 1em;
+    margin-bottom: 1em!important;
+}

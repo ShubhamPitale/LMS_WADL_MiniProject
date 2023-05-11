@@ -1,0 +1,93 @@
+.card {
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 75px;
+  width: 100%;
+}
+
+.logo img {
+  height: 100%;
+  width: 100%;
+}
+
+.card-title {
+  font-size: 24px;
+}
+.button {
+  border: 1px solid white;
+}
+.card-subtitle {
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background-color: rgb(177, 136, 87);
+}
+
+.btn-primary:hover {
+  background-color: rgb(211, 135, 42);
+}
+
+.form-control {
+  width: 400px;
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .form-control {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.filter-label {
+  margin-right: 10px;
+}
+
+@media (max-width: 767px) {
+  .filter-label {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.nav-link {
+  font-size: 18px;
+}
+
+.form-inline {
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: #fff;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .form-inline {
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 1px;
+  }
+}
+.mb-4 {
+  background-color: rgb(252, 236, 215);
+  transition: all 0.3s ease-in-out;
+}
+
+.mb-4:hover {
+  transform: scale(0.99);
+}
