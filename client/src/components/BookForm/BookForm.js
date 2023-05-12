@@ -13,7 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 import styles from './BookForm.module.css';
-import { Bookapi } from '../../BackendAPI/Book';
+import Bookapi from '../../BackendAPI/Book';
 
 export const BookForm = () => {
   const { bookId } = useParams();
@@ -297,15 +297,16 @@ export const BookForm = () => {
                 }}
               />
             </FormControl>
-            {!bookId && (<FormControl className={styles.mb2}>
-              <TextField
-                name="image"
-                type="file"
-                onChange={updateBookField}
-                onBlur={validateForm}
-              />
-            </FormControl>)
-            }
+            {!bookId && (
+              <FormControl className={styles.mb2}>
+                <TextField
+                  name="image"
+                  type="file"
+                  onChange={updateBookField}
+                  onBlur={validateForm}
+                />
+              </FormControl>
+            )}
           </FormGroup>
           <div className={styles.btnContainer}>
             <Button

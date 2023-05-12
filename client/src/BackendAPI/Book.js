@@ -67,4 +67,4 @@ const Bookapi = {
   },
 };
 
-module.exports = { Bookapi };
+module.exports = Bookapi;

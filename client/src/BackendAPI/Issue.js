@@ -52,4 +52,4 @@ const Issueapi = {
   },
 };
 
-module.exports = { Issueapi };
+module.exports = Issueapi;

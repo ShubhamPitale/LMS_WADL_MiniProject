@@ -12,4 +12,4 @@ const Userapi = {
   },
 };
 
-module.exports = { Userapi };
+module.exports = Userapi;

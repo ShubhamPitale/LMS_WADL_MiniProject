@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, TextField, FormGroup, FormControl } from '@mui/material';
 import styles from './AdminLoginnew.module.css';
-import { Userapi } from '../../BackendAPI/User';
 
 const UserSignUp = () => {
   const navigate = useNavigate();

@@ -4,7 +4,7 @@ import { Button, TextField, FormGroup, FormControl } from '@mui/material';
 import styles from './AdminLogin.module.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Userapi } from '../../../BackendAPI/User';
+import Userapi from '../../../BackendAPI/User';
 
 const AdminLoginnew = () => {
   const navigate = useNavigate();

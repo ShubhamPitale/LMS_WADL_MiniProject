@@ -9,11 +9,10 @@ import styles from './Dashboard.module.css';
 import TablePagination from '@mui/material/TablePagination';
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
-import { Bookapi } from '../../BackendAPI/Book';
+import Bookapi from '../../BackendAPI/Book';
 import Navbar from '../Navbar/Navbar';
 import CircularProgress from '@mui/material/CircularProgress';
 import Stack from '@mui/material/Stack';
-
 
 // const DUMMY_BOOK = [
 //   {
@@ -68,7 +67,7 @@ const AdminDashboard = () => {
     if (!localStorage.getItem('token')) {
       navigate('/login');
     } else {
-      setLoading(true)
+      setLoading(true);
       const token = localStorage.getItem('token');
       fetchBooks(token)
         .then((res) => console.log(res))
@@ -81,10 +80,20 @@ const AdminDashboard = () => {
 
   return (
     <>
-    {loading ? (<Stack alignItems="center">
-    <CircularProgress size={"5rem"} style={{display:"flex",alignItems:"center",justifyContent:'center',minHeight:"100vh"}}/>
-      </Stack>) :
-    (<div className={styles['dashboard']}>
+      {loading ? (
+        <Stack alignItems="center">
+          <CircularProgress
+            size={'5rem'}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minHeight: '100vh',
+            }}
+          />
+        </Stack>
+      ) : (
+        <div className={styles['dashboard']}>
           <Navbar />
           <div className={styles['dashboard-title']}>
             <h3>Book List</h3>
@@ -106,7 +115,10 @@ const AdminDashboard = () => {
           {books?.length > 0 ? (
             <>
               {(rowsPerPage > 0
-                ? books.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                ? books.slice(
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
                 : books
               ).map((book) => (
                 <div className={styles['list-book-container']} key={book._id}>
@@ -207,7 +219,8 @@ const AdminDashboard = () => {
               </Button>
             </Modal.Footer>
           </Modal>
-    </div>)}
+        </div>
+      )}
     </>
   );
 };
