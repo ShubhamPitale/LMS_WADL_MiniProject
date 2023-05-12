@@ -1,6 +1,6 @@
 const Bookapi = {
   getAllBooks: async (token) => {
-    const res = await fetch('http://localhost:5000/api/books/', {
+    const res = await fetch('https://lms-2.onrender.com/api/books/', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -12,7 +12,7 @@ const Bookapi = {
 
   getBook: async (bookId) => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:5000/api/books/${bookId}`, {
+    const res = await fetch(`https://lms-2.onrender.com/api/books/${bookId}`, {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -24,7 +24,7 @@ const Bookapi = {
 
   addBook: async (data) => {
     const token = localStorage.getItem('token');
-    const res = await fetch('http://localhost:5000/api/books/', {
+    const res = await fetch('https://lms-2.onrender.com/api/books/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -37,7 +37,7 @@ const Bookapi = {
 
   patchBook: async (bookId, data) => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:5000/api/books/${bookId}`, {
+    const res = await fetch(`https://lms-2.onrender.com/api/books/${bookId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -50,7 +50,7 @@ const Bookapi = {
 
   deleteBook: async (bookId) => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:5000/api/books/${bookId}`, {
+    const res = await fetch(`https://lms-2.onrender.com/api/books/${bookId}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -60,7 +60,7 @@ const Bookapi = {
   },
 
   fetchIssuedBooks: async () => {
-    const res = await fetch('http://localhost:5000/api/issues/', {
+    const res = await fetch('https://lms-2.onrender.com/api/issues/', {
       method: 'GET',
     });
     return res.json();

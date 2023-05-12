@@ -70,7 +70,7 @@ const UserSignUp = () => {
     event.preventDefault();
     console.log(isInvalid);
     if (isInvalid.email && isInvalid.password) {
-      await fetch('http://localhost:5000/api/users/signup', {
+      await fetch('https://lms-2.onrender.com/api/users/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -12,12 +12,15 @@ const BookDetails = () => {
     async function fetchdata() {
       const token = JSON.parse(localStorage.getItem('token'));
       // console.log('hii',token);
-      const responce = await fetch(`http://localhost:5000/api/books/${id}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const responce = await fetch(
+        `https://lms-2.onrender.com/api/books/${id}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       const data = await responce.json();
       //console.log(data);

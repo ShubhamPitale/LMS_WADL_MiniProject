@@ -1,6 +1,6 @@
 const Issueapi = {
   getAllIssues: async (token) => {
-    const res = await fetch('http://localhost:5000/api/issues/', {
+    const res = await fetch('https://lms-2.onrender.com/api/issues/', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -13,7 +13,7 @@ const Issueapi = {
 
   addIssue: async (issue) => {
     const token = localStorage.getItem('token');
-    const res = await fetch('http://localhost:5000/api/issues/', {
+    const res = await fetch('https://lms-2.onrender.com/api/issues/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ const Issueapi = {
 
   deleteAllIssues: async () => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:5000/api/issues/`, {
+    const res = await fetch(`https://lms-2.onrender.com/api/issues/`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${token}`,
@@ -38,13 +38,16 @@ const Issueapi = {
   },
   updateIssue: async (issueId) => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`http://localhost:5000/api/issues/${issueId}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    const res = await fetch(
+      `https://lms-2.onrender.com/api/issues/${issueId}`,
+      {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
     return await res.json();
   },
 };

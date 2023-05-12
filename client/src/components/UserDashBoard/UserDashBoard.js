@@ -113,7 +113,7 @@ function HomePage() {
     async function fetchdata() {
       const token = JSON.parse(localStorage.getItem('token'));
       console.log('hii', token);
-      const responce = await fetch('http://localhost:5000/api/books/', {
+      const responce = await fetch('https://lms-2.onrender.com/api/books/', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
@@ -129,7 +129,7 @@ function HomePage() {
       const token = JSON.parse(localStorage.getItem('token'));
       console.log('hii', token);
       const responce = await fetch(
-        'http://localhost:5000/api/issues/student/',
+        'https://lms-2.onrender.com/api/issues/student/',
         {
           headers: {
             'Content-Type': 'application/json',
