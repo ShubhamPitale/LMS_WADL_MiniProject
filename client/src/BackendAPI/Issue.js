@@ -51,5 +51,4 @@ const Issueapi = {
     return await res.json();
   },
 };
-
-module.exports = Issueapi;
+export default Issueapi;
